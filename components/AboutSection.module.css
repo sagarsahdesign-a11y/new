@@ -1,0 +1,54 @@
+.section {
+    background: var(--bg);
+    padding: 40px 0 120px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.sectionTitle {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.titleIcon {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.content {
+    max-width: 500px;
+}
+
+.text {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+.link {
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s ease;
+}
+
+.link:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}

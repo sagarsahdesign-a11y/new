@@ -1,0 +1,107 @@
+.section {
+    background: var(--cream);
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.label {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--orange);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.heading {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 48px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-out;
+}
+
+.card:hover {
+    box-shadow: 0 12px 40px rgba(255, 122, 61, 0.14);
+    transform: translateY(-4px);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.stepNum {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.stepIcon {
+    font-size: 24px;
+}
+
+.cardTitle {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 0 0 8px;
+}
+
+.cardBody {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .heading {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

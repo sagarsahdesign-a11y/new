@@ -1,0 +1,439 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    background: var(--cream);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Central Text */
+.centerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    pointer-events: none;
+    text-align: center;
+    user-select: none;
+}
+
+.heroName {
+    font-family: var(--font-serif);
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--charcoal);
+    margin: 0;
+}
+
+.heroTitle {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    color: var(--gray-mid);
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+
+.heroTagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted-text);
+    margin-top: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locationPill {
+    display: inline-block;
+    background: #F0F0F0;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--charcoal);
+    margin-top: 16px;
+}
+
+/* Sticker Canvas */
+.stickerCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.sticker {
+    touch-action: none;
+}
+
+/* ===== Polaroid ===== */
+.polaroid {
+    width: 150px;
+    background: var(--white);
+    padding: 12px 12px 44px 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.polaroid:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.polaroidImage {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #FF7A3D, #FFB347);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.polaroidCaption {
+    font-family: var(--font-handwritten);
+    font-size: 14px;
+    color: var(--charcoal);
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ===== Social Badge ===== */
+.socialBadge {
+    width: 140px;
+    padding: 20px 16px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #E1306C, #F77737, #FFDC80);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.socialNumber {
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.socialLabel {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 2px;
+}
+
+.socialPills {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.socialPills span {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+/* ===== Sticky Note ===== */
+.stickyNote {
+    width: 150px;
+    min-height: 110px;
+    background: #FFF9C4;
+    padding: 16px 14px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 2px;
+}
+
+.stickyTape {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+}
+
+.stickyText {
+    font-family: var(--font-handwritten);
+    font-size: 16px;
+    color: var(--charcoal);
+    line-height: 1.4;
+}
+
+.stickySubtext {
+    font-family: var(--font-handwritten);
+    font-size: 12px;
+    color: var(--gray-mid);
+    margin-top: 6px;
+}
+
+/* ===== Cyber Badge ===== */
+.cyberBadge {
+    width: 150px;
+    padding: 20px 16px;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 122, 61, 0.35);
+    box-shadow: 0 0 18px rgba(255, 122, 61, 0.18);
+    text-align: center;
+}
+
+.cyberIcon {
+    font-size: 28px;
+}
+
+.cyberLabel {
+    color: var(--orange);
+    font-family: var(--font-sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+.cyberTitle {
+    color: white;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.cyberDots {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dotFilled {
+    background: var(--orange);
+}
+
+.dotDim {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Music Widget ===== */
+.musicWidget {
+    width: 170px;
+    padding: 16px;
+    background: #1DB954;
+    border-radius: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.vinyl {
+    font-size: 28px;
+    transition: transform 0.3s ease-out;
+}
+
+.spinning {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.musicInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.musicTrack {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.musicSub {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 2px;
+}
+
+.progressBar {
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progressFill {
+    width: 70%;
+    height: 100%;
+    background: white;
+    border-radius: 999px;
+}
+
+/* ===== Palette Card ===== */
+.paletteCard {
+    width: 140px;
+    padding: 16px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.paletteTitle {
+    font-family: var(--font-handwritten);
+    font-size: 16px;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+}
+
+.swatches {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.swatch {
+    width: 20px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.paletteCode {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    color: var(--gray-mid);
+    margin-top: 8px;
+}
+
+/* ===== Toolbox Card ===== */
+.toolboxCard {
+    width: 160px;
+    padding: 18px 16px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.toolboxTitle {
+    font-family: var(--font-handwritten);
+    font-size: 16px;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.toolboxIcons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.toolIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.toolboxPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.toolboxPills span {
+    background: var(--orange);
+    color: white;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 999px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .heroName {
+        font-size: 48px;
+    }
+
+    .heroTitle {
+        font-size: 12px;
+    }
+
+    .heroTagline {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 160px;
+    }
+
+    .stickerCanvas {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 20px;
+        margin-top: 32px;
+    }
+
+    .sticker {
+        position: relative !important;
+        transform: none !important;
+    }
+
+    .centerText {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding-top: 80px;
+    }
+}

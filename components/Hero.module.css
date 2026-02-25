@@ -1,0 +1,693 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Central Text ===== */
+.centerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    pointer-events: none;
+    text-align: center;
+    user-select: none;
+}
+
+.name {
+    font-family: var(--font-script);
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 1.0;
+    color: var(--black);
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.role {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+}
+
+.roleItalic {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--gray);
+    margin-top: 2px;
+}
+
+.tagline {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--black);
+    margin-top: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+}
+
+/* ===== Object Base ===== */
+.object {
+    position: absolute;
+    touch-action: none;
+}
+
+/* ===== Desk Lamp ===== */
+.lamp {
+    position: relative;
+    width: 120px;
+    height: 180px;
+}
+
+.lampShade {
+    width: 100px;
+    height: 70px;
+    background: linear-gradient(145deg, #8B4513, #6B3410, #4A2508);
+    border-radius: 50% 50% 10% 10%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3), inset 0 -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Golden light glow under the lamp */
+.lampGlow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(235, 195, 75, 0.5);
+    box-shadow: rgba(235, 195, 75, 0.7) 0px 1px 30px 15px;
+    position: absolute;
+    top: 60px;
+    left: 45px;
+    animation: lampPulse 3s ease-in-out infinite;
+}
+
+@keyframes lampPulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.lampNeck {
+    width: 6px;
+    height: 60px;
+    background: linear-gradient(to right, #B87333, #CD853F, #B87333);
+    position: absolute;
+    top: 65px;
+    left: 55px;
+}
+
+.lampBase {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #B87333, #8B6914);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Torn Newspaper ===== */
+.newspaper {
+    width: 180px;
+    padding: 14px 16px;
+    background: #F5E6C8;
+    border-radius: 2px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    clip-path: polygon(0% 5%, 8% 0%, 15% 4%, 25% 1%, 35% 5%, 42% 0%, 55% 3%, 65% 0%, 75% 4%, 85% 1%, 92% 5%, 100% 0%, 100% 95%, 92% 100%, 85% 96%, 75% 100%, 65% 96%, 55% 100%, 45% 96%, 35% 100%, 25% 97%, 15% 100%, 8% 96%, 0% 100%);
+}
+
+.newspaperTorn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+
+.newspaperSmall {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 1.4;
+}
+
+.newspaperWord {
+    font-family: var(--font-mono);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 4px 0;
+    background: linear-gradient(transparent 60%, rgba(255, 200, 100, 0.4) 60%);
+    display: inline;
+}
+
+/* ===== Notebook ===== */
+.notebook {
+    width: 240px;
+    height: 280px;
+    background: #FAFAFA;
+    border-radius: 4px;
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.notebookGrid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(180, 200, 220, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180, 200, 220, 0.2) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.coffeeStain {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(139, 90, 43, 0.18);
+    background: radial-gradient(circle, rgba(139, 90, 43, 0.06) 0%, transparent 70%);
+}
+
+.pen {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 6px;
+    height: 200px;
+    background: linear-gradient(to bottom, #D4D4D4, #B0B0B0, #888);
+    border-radius: 2px;
+    transform: rotate(15deg);
+    transform-origin: top center;
+}
+
+.pen::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 6px;
+    height: 14px;
+    background: linear-gradient(to bottom, #888, #333);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* ===== Film Roll ===== */
+.filmRoll {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.filmCanister {
+    width: 40px;
+    height: 65px;
+    background: linear-gradient(to bottom, #1a1a1a 0%, #333 20%, #1a1a1a 40%, #C9A43C 45%, #E8C44D 50%, #C9A43C 55%, #1a1a1a 60%, #333 80%, #1a1a1a 100%);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.filmLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.filmBrand {
+    font-family: var(--font-mono);
+    font-size: 5px;
+    font-weight: 700;
+    color: #C9A43C;
+    letter-spacing: 2px;
+}
+
+.filmType {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    color: #E8C44D;
+    letter-spacing: 1px;
+}
+
+.filmSpeed {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: #E8C44D;
+}
+
+.filmStrip {
+    width: 60px;
+    height: 18px;
+    background: linear-gradient(to right, #2a1f0a, #3d2b10, #2a1f0a);
+    border-radius: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filmSprocket {
+    width: 8px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+}
+
+/* ===== Lighter ===== */
+.lighter {
+    width: 36px;
+    height: 72px;
+}
+
+.lighterBody {
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    border-radius: 6px 6px 4px 4px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.12);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 4px;
+}
+
+.lighterFlame {
+    font-size: 14px;
+}
+
+.lighterLabel {
+    font-family: var(--font-script);
+    font-size: 14px;
+    color: #E8453C;
+    font-weight: 700;
+}
+
+/* ===== Tube / Hand Cream ===== */
+.tube {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    transform: rotate(-5deg);
+}
+
+.tubeCap {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #87CEEB, #5BA3D9);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.tubeBody {
+    flex: 1;
+    height: 40px;
+    background: linear-gradient(to bottom, #a8d8ea, #87CEEB, #6bb3d9);
+    border-radius: 4px 20px 20px 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tubeLogo {
+    font-size: 16px;
+}
+
+.tubeText {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Vinyl Music Player ===== */
+.musicPlayer {
+    width: 240px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.vinylContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.vinyl {
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle,
+            #222 0%,
+            #222 20%,
+            #111 21%,
+            #2a2a2a 30%,
+            #111 31%,
+            #222 40%,
+            #111 41%,
+            #2a2a2a 50%,
+            #111 51%,
+            #1a1a1a 60%,
+            #111 70%,
+            #1a1a1a 80%,
+            #111 90%,
+            #222 100%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-out;
+}
+
+.vinyl.spinning {
+    animation: vinylSpin 3s linear infinite;
+}
+
+@keyframes vinylSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vinylCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #E8453C 0deg, #E8453C 120deg, #f5f0e8 120deg, #f5f0e8 240deg, #E8453C 240deg, #E8453C 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vinylCenter::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.musicMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.musicIcon {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.musicArtist {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gray);
+}
+
+.musicTrack {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.musicProgress {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.musicProgressBar {
+    width: 100%;
+    height: 4px;
+    background: #E8E5DE;
+    border-radius: 999px;
+    position: relative;
+}
+
+.musicProgressFill {
+    width: 35%;
+    height: 100%;
+    background: var(--black);
+    border-radius: 999px;
+}
+
+.musicProgressDot {
+    position: absolute;
+    top: -3px;
+    left: 35%;
+    width: 10px;
+    height: 10px;
+    background: var(--black);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.musicTime {
+    display: flex;
+    justify-content: space-between;
+}
+
+.musicTime span {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--gray);
+}
+
+/* ===== Pixel Cursor ===== */
+.pixelCursor {
+    filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.15));
+}
+
+/* ===== Blue macOS Folder ===== */
+.folder {
+    width: 150px;
+    position: relative;
+    text-align: center;
+}
+
+.folderImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 16px rgba(91, 163, 217, 0.3));
+}
+
+.folderLabel {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--black);
+    text-align: center;
+    margin-top: 6px;
+    letter-spacing: -0.32px;
+    line-height: 16.5px;
+}
+
+/* ===== AirDrop Notification ===== */
+.airdrop {
+    width: 200px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.airdropHeader {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.airdropTitle {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.02em;
+}
+
+.airdropSub {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--gray);
+    margin-top: 2px;
+}
+
+.airdropImage {
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.airdropGradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF6B35, #FF8E53, #FF4500, #FFD700);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.airdropActions {
+    display: flex;
+    gap: 8px;
+}
+
+.airdropDecline {
+    flex: 1;
+    padding: 8px;
+    border-radius: 10px;
+    background: #F0F0F0;
+    color: #2196F3;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.airdropAccept {
+    flex: 1;
+    padding: 8px;
+    border-radius: 10px;
+    background: #F0F0F0;
+    color: #2196F3;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== MS Paint Toolbar ===== */
+.paintToolbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: #C0C0C0;
+    border: 2px outset #DFDFDF;
+    padding: 4px;
+    width: 60px;
+}
+
+.paintTool {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: #C0C0C0;
+    border: 1px solid #808080;
+    cursor: pointer;
+}
+
+.paintTool:hover {
+    border-style: inset;
+    background: #D0D0D0;
+}
+
+/* ===== Currently Cooking Badge ===== */
+.cookingBadge {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    pointer-events: none;
+}
+
+.cookingBadge span {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .name {
+        font-size: 56px;
+    }
+
+    .role {
+        font-size: 13px;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0 140px;
+    }
+
+    .notebook,
+    .musicPlayer {
+        transform: scale(0.7);
+    }
+
+    .paintToolbar {
+        display: none;
+    }
+}
