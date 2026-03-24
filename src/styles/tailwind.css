@@ -1,0 +1,14 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@theme {
+  --color-bg: #f7f7f7;
+  --color-primary: rgb(49, 49, 49);
+  --color-orange: rgb(254, 99, 1);
+  --color-gray-muted: rgb(139, 139, 139);
+  --color-border: #e8e8e8;
+  --color-card-white: #ffffff;
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
