@@ -183,6 +183,18 @@ const css = `
 }
 .pg-card-wide {
   grid-column: 1 / 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+.pg-nodes-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding-left: 24px;
+  flex-shrink: 0;
 }
 @media (max-width: 768px) {
   .pg-grid {
@@ -190,6 +202,17 @@ const css = `
   }
   .pg-card-wide {
     grid-column: 1;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+    padding: 24px 20px !important;
+  }
+  .pg-nodes-col {
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
+    padding-left: 0 !important;
+    padding-top: 20px !important;
+    width: 100% !important;
   }
 }
 `;
@@ -296,10 +319,6 @@ export function SagarPlayground() {
                 background: "rgb(27,27,27)",
                 borderRadius: 20,
                 padding: "24px 28px",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: 28,
                 overflow: "hidden",
                 position: "relative",
               }}
@@ -423,16 +442,7 @@ export function SagarPlayground() {
               </div>
 
               {/* Live data column */}
-              <div
-                style={{
-                  flexShrink: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 16,
-                  borderLeft: "1px solid rgba(255,255,255,0.08)",
-                  paddingLeft: 24,
-                }}
-              >
+              <div className="pg-nodes-col">
                 <div
                   style={{
                     fontSize: 10,
@@ -525,8 +535,8 @@ export function SagarPlayground() {
                     borderTop: "1px solid #f0f0f0",
                   }}
                 >
-                  <BpmBadge value="50+" label="Dishes cooked" />
-                  <BpmBadge value="∞" label="Coffees drunk" />
+                  <BpmBadge value="4.2k+" label="Layers organized" />
+                  <BpmBadge value="1.2M+" label="Pixels nudged" />
                 </div>
               </div>
             </motion.div>

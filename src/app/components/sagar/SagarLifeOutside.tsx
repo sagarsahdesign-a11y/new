@@ -18,6 +18,9 @@ const foodCaptions = [
   { emoji: "📅", text: "Just a Friday >" },
   { emoji: "☕", text: "3am brew ritual" },
   { emoji: "🥗", text: "Weekend fuel" },
+  { emoji: "🍗", text: "Chicken wings & design vibes" },
+  { emoji: "🌮", text: "Taco Tuesday (at midnight)" },
+  { emoji: "🥯", text: "The perfect morning wrap" },
 ];
 
 const hobbyTags = [
@@ -30,9 +33,9 @@ const hobbyTags = [
 ];
 
 const stats = [
-  { value: "50+", label: "Projects shipped" },
-  { value: "∞", label: "Cups of coffee" },
-  { value: "3am", label: "Usual bedtime" },
+  { value: "50+", label: "Recipes explored" },
+  { value: "∞", label: "Late night focus" },
+  { value: "3am", label: "Creative peak hour" },
   { value: "1st", label: "Gen designer in family" },
 ];
 

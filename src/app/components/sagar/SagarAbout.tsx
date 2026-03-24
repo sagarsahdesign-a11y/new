@@ -37,7 +37,7 @@ function PhoneMockup() {
           </div>
         </div>
         <a
-          href="https://linkedin.com/in/sagar-shah"
+          href="https://www.linkedin.com/in/sagar-shah-389980319/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-black text-white rounded-[12px] px-3 py-1.5 text-[12px] font-medium flex items-center gap-1"
@@ -115,6 +115,7 @@ export function SagarAbout() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
+                onClick={() => window.open("https://drive.google.com/file/d/14h3tJdt53D2hXQq6d3jlFpNO55HU79yz/view?usp=sharing", "_blank")}
                 className="flex items-center gap-2 bg-[#fe6301] text-white rounded-full px-7 py-3 text-[15px] font-medium tracking-[-0.3px]"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >

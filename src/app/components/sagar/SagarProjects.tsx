@@ -40,6 +40,7 @@ interface ProjectData {
   fallbackBg: string;
   bottomCategory: string;
   bottomTitle: string;
+  link: string;
 }
 
 const projects: ProjectData[] = [
@@ -52,6 +53,7 @@ const projects: ProjectData[] = [
     fallbackBg: "#1a3a8f",
     bottomCategory: "SEAMLESS TRADING PLATFORM",
     bottomTitle: "ZenTrade",
+    link: "https://www.behance.net/gallery/217897807/ZenTrade-Trading-App-Ui-Design",
   },
   {
     id: "mountainbrew",
@@ -62,6 +64,7 @@ const projects: ProjectData[] = [
     fallbackBg: "#1e2d5a",
     bottomCategory: "CAFE MOBILE APP CASE STUDY",
     bottomTitle: "Mountain Brew",
+    link: "https://www.behance.net/gallery/213575215/Cafe-Mobile-App-Case-Study",
   },
   {
     id: "airx",
@@ -72,6 +75,7 @@ const projects: ProjectData[] = [
     fallbackBg: "#2563eb",
     bottomCategory: "PREDICT WEBSITE REDESIGN",
     bottomTitle: "AirX",
+    link: "https://www.behance.net/gallery/217897693/AirX-Airline-Website-Design",
   },
   {
     id: "activepulse",
@@ -82,6 +86,7 @@ const projects: ProjectData[] = [
     fallbackBg: "#dc2626",
     bottomCategory: "HUGGL 2.0 · CASE STUDY",
     bottomTitle: "ActivePulse",
+    link: "https://www.behance.net/gallery/204619533/ActivePulse-Fitness-Tracking-App-design",
   },
 ];
 
@@ -94,6 +99,11 @@ function ProjectCard({ p, index }: { p: ProjectData; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
+  const openLink = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open(p.link, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -102,6 +112,7 @@ function ProjectCard({ p, index }: { p: ProjectData; index: number }) {
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: (index % 2) * 0.12 }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={openLink}
       style={{
         borderRadius: 22,
         overflow: "hidden",
@@ -320,6 +331,7 @@ export function SagarProjects() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
+              onClick={() => window.open("https://www.behance.net/shubhamsah6", "_blank", "noopener,noreferrer")}
               style={{
                 background: "rgb(49,49,49)",
                 color: "white",
