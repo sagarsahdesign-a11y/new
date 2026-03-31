@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SagarNav } from './components/sagar/SagarNav';
 import { SagarHero } from './components/sagar/SagarHero';
 import { SagarProjects } from './components/sagar/SagarProjects';
@@ -24,6 +25,7 @@ export default function App() {
       <SagarAbout />
       <SagarTestimonials />
       <SagarFooter />
+      <Analytics />
     </>
   );
 }
